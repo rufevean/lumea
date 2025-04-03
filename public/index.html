@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <h1>Lumea</h1>
+        </div>
+        <div class="nav-right">
+            <select id="project-dropdown" onchange="loadProject(this.value)">
+                <option value="">Select Project</option>
+            </select>
+            <button onclick="createProject()">➕ Add Project</button>
+            <button onclick="renameProject()">✏ Rename</button>
+            <button onclick="deleteProject()">🗑 Delete</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <textarea id="editor" placeholder="Write Markdown..." oninput="updatePreview()"></textarea>
+        <div id="preview"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
